@@ -15,14 +15,22 @@ const SignUp = () => {
     const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(name, email, password);
+    const role = form.role.value;
+    console.log(name, email, password, role);
     createUser(email, password)
         .then(result => {
             const user = result.user
             console.log(user);
             form.reset()
             setError('')
-            handleUpdateUserProfile(name)
+            const profile = {
+                displayName:name,
+            }
+            updateProfileUser(profile)
+            .then(()=>{})
+            .catch(error =>{
+                console.error(error);
+            })
             navigate('/')
         })
         .catch(error =>
@@ -30,17 +38,6 @@ const SignUp = () => {
                 console.error(error)
                 setError(error.message)
             })
-  }
-
-  const handleUpdateUserProfile = (name)  =>{
-    const profile = {
-        displayName:name,
-    }
-    updateProfileUser(profile)
-    .then(()=>{})
-    .catch(error =>{
-        console.error(error);
-    })
   }
 
   const googleProvider = new GoogleAuthProvider();
@@ -74,6 +71,13 @@ const SignUp = () => {
                     <div className="form-control w-full max-w-xs">
                         <label className="label"> <span className="label-text">Password</span></label>
                         <input name="password" type="password" placeholder="password" className="input input-bordered w-full max-w-xs required" />
+                    </div>
+                    <div className="form-control w-full max-w-xs">
+                    <label className="label" htmlFor="role"><span className="label-text">Choose a role:</span></label>
+                        <select className="select w-full select-bordered" name="role" id="role">
+                            <option value="Saler">Saler</option>
+                            <option value="User">User</option>
+                        </select>
                     </div>
                     <p>{error}</p>
                     <button className="btn btn-primary w-full my-5">Login</button>

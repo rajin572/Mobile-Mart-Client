@@ -13,14 +13,12 @@ const Navbar = () => {
     const menuItems = <React.Fragment>
         <li className='btn btn-ghost'><Link to="/">Home</Link></li>
         <li className='btn btn-ghost'><Link to="/blog">Blog</Link></li>
-        <li className='btn btn-ghost'><Link to="/">Dashboard</Link></li>
-        {/* <li className='btn btn-ghost'><Link to="/login">Login</Link></li> */}
         {user?.uid ?
             <>
-                <li><Link to="/">Dashboard</Link></li>
-                <li><button onClick={handleLogOut}>Sign out</button></li>
+                <li className='btn btn-ghost'><Link to="/">Dashboard</Link></li>
+                <li className='btn btn-ghost'><button onClick={handleLogOut}>Sign out</button></li>
             </>
-            : <li><Link to="/login">Login</Link></li>}
+            : <li className='btn btn-ghost'><Link to="/login">Login</Link></li>}
     </React.Fragment>
 
     return (
