@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const categoriesCard = ({category}) => {
-    const {name, image} = category
+    const {category_id, name, image} = category
   return (
     <div className="card bg-base-100 shadow-2xl">
       <figure>
@@ -15,7 +16,7 @@ const categoriesCard = ({category}) => {
         <h2 className="card-title">{name}</h2>
         <p>You can see all the product of this category by clicking All Products button</p>
         <div className="card-actions w-full">
-          <button className="btn btn-outline w-full">All Products</button>
+        <Link className="w-full" to={`/categories/${category_id}`}><button className="btn btn-outline w-full">All Products</button></Link>
         </div>
       </div>
     </div>
