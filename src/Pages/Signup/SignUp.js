@@ -51,7 +51,7 @@ const SignUp = () => {
         toast.success('Account Created Successfully!')
         const name = user.displayName;
         const email = user.email
-        const role = "user"
+        const role = "buyer"
         saveUserToDatabase(name, email, role)
         navigate('/')
       })
@@ -98,7 +98,7 @@ const SignUp = () => {
                     <label className="label" htmlFor="role"><span className="label-text">Choose a role:</span></label>
                         <select className="select w-full select-bordered" name="role" id="role">
                             <option value="Saler">Saler</option>
-                            <option value="User">User</option>
+                            <option value="Buyer">Buyer</option>
                         </select>
                     </div>
                     <p>{error}</p>

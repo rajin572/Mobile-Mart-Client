@@ -39,7 +39,7 @@ const Login = () => {
           toast.success('Logged In Successfully!')
           const name = user.displayName;
           const email = user.email
-          const role = "user"
+          const role = "buyer"
           saveUserToDatabase(name, email, role)
           navigate(from, {replace: true})
           setError('')
