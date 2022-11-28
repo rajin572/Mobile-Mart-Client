@@ -21,7 +21,6 @@ const BookProduct = ({productDetails, setProductDetails}) => {
             phone,
             meeting_Location
         }
-        console.log(booking);
 
 
 
@@ -34,7 +33,6 @@ const BookProduct = ({productDetails, setProductDetails}) => {
         })
         .then(res => res.json())
         .then(data =>{ 
-            console.log(data)
             if(data.acknowledged){
                 setProductDetails(null);
             }

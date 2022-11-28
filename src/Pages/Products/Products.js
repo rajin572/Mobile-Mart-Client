@@ -6,7 +6,6 @@ import ProductCard from './ProductCard';
 const Products = () => {
     const [productDetails, setProductDetails] = useState(null);
     const data = useLoaderData();
-    console.log(data);
     return (
         <div className='my-10'>
             <h2 className='text-center text-5xl'>Products</h2>
