@@ -102,7 +102,7 @@ const SignUp = () => {
                         </select>
                     </div>
                     <p>{error}</p>
-                    <button className="btn btn-primary w-full my-5">Login</button>
+                    <button className="btn btn-primary w-full my-5">Sign Up</button>
                 </form>
                 <p>Already have an account! <Link className=' text-blue-600' to="/login"> Please Login</Link></p>
                 <div className="divider">OR</div>
