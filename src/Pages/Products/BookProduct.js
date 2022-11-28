@@ -62,19 +62,19 @@ const BookProduct = ({productDetails, setProductDetails}) => {
                     </div>
                     <div className="form-control w-full">
                         <label className="label"> <span className="label-text">Product Name</span></label>
-                        <input type="text" disabled value={name} className="input w-full input-bordered " />
+                        <input type="text" disabled value={name} className="input w-full input-bordered " required/>
                     </div>
                     <div className="form-control w-full">
                         <label className="label"> <span className="label-text">Product Price</span></label>
-                        <input type="text" disabled value={resalePrice} className="input w-full input-bordered " />
+                        <input type="text" disabled value={resalePrice} className="input w-full input-bordered " required/>
                     </div>
                     <div className="form-control w-full">
                         <label className="label"> <span className="label-text">Phone Number</span></label>
-                        <input name="phone" type="number" placeholder="Phone Number" className="input w-full input-bordered" />
+                        <input name="phone" type="number" placeholder="Phone Number" className="input w-full input-bordered" required/>
                     </div>
                     <div className="form-control w-full">
                         <label className="label"> <span className="label-text">Meeting Location</span></label>
-                        <input name="meeting_Location" type="text" placeholder="Meeting Location" className="input w-full input-bordered" />
+                        <input name="meeting_Location" type="text" placeholder="Meeting Location" className="input w-full input-bordered" required />
                     </div>
                     <br />
                     <input className='btn btn-accent w-full' type="submit" value="Submit" />

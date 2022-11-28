@@ -35,7 +35,12 @@ const Login = () => {
     const handleGoogleLogin = () =>{
         googleLogin(googleProvider)
         .then(result =>{
+          const user = result.user;
           toast.success('Logged In Successfully!')
+          const name = user.displayName;
+          const email = user.email
+          const role = "user"
+          saveUserToDatabase(name, email, role)
           navigate(from, {replace: true})
           setError('')
         })
@@ -44,6 +49,20 @@ const Login = () => {
         })
       }
 
+      const saveUserToDatabase = (name, email, role) => {
+        const user = { name, email, role };
+        fetch("http://localhost:5000/users", {
+          method: "PUT",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(user),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+          });
+      };
 
     return (
 <div className="hero min-h-screen bg-base-200">

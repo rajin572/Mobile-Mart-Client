@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import BookProduct from "../../Products/BookProduct";
 
 const AdvertiseItems = () => {
+  const [productDetails, setProductDetails] = useState(null);
   return (
     <div className="my-32">
       <h2 className=" text-4xl lg:text-5xl font-bold text-center">Advertise Items</h2>
@@ -16,7 +18,13 @@ const AdvertiseItems = () => {
             <h2 className="card-title">Shoes!</h2>
             <p>If a dog chews shoes whose shoes does he choose?</p>
             <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
+            <label
+            htmlFor="booking-modal"
+            className="btn btn-primary w-full text-white"
+            onClick={() => setProductDetails('product')}
+          >
+            Book Product
+          </label>
             </div>
           </div>
         </div>
@@ -30,7 +38,13 @@ const AdvertiseItems = () => {
             <h2 className="card-title">Shoes!</h2>
             <p>If a dog chews shoes whose shoes does he choose?</p>
             <div className="card-actions w-full">
-              <button className="btn btn-outline w-full">Book Now</button>
+            <label
+            htmlFor="booking-modal"
+            className="btn btn-primary w-full text-white"
+            onClick={() => setProductDetails('product')}
+          >
+            Book Product
+          </label>
             </div>
           </div>
         </div>
@@ -44,13 +58,26 @@ const AdvertiseItems = () => {
             <h2 className="card-title">Shoes!</h2>
             <p>If a dog chews shoes whose shoes does he choose?</p>
             <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
+            <label
+            htmlFor="booking-modal"
+            className="btn btn-primary w-full text-white"
+            onClick={() => setProductDetails('product')}
+          >
+            Book Product
+          </label>
             </div>
           </div>
         </div>
 
         
       </div>
+      {
+                productDetails &&
+                <BookProduct
+                productDetails={productDetails}
+                setProductDetails={setProductDetails}
+                ></BookProduct>
+            }
     </div>
   );
 };

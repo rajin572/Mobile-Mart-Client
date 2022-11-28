@@ -27,6 +27,7 @@ const SignUp = () => {
             }
             updateProfileUser(profile)
             .then(()=>{
+                saveUserToDatabase(name, email, role);
                 toast.success('Account Created Successfully!')
             })
             .catch(error =>{
@@ -45,14 +46,35 @@ const SignUp = () => {
   const handleGoogleLogin = () =>{
       googleLogin(googleProvider)
       .then(result =>{
+        const user = result.user;
         setError('')
         toast.success('Account Created Successfully!')
+        const name = user.displayName;
+        const email = user.email
+        const role = "user"
+        saveUserToDatabase(name, email, role)
         navigate('/')
       })
       .catch(error => {
         console.log(error);
       })
     }
+
+
+    const saveUserToDatabase = (name, email, role) => {
+        const user = { name, email, role };
+        fetch("http://localhost:5000/users", {
+          method: "PUT",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(user),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+          });
+      };
 
     return (
 <div className='h-[800px] bg-base-200 flex justify-center items-center'>
