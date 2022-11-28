@@ -97,8 +97,8 @@ const SignUp = () => {
                     <div className="form-control w-full max-w-xs">
                     <label className="label" htmlFor="role"><span className="label-text">Choose a role:</span></label>
                         <select className="select w-full select-bordered" name="role" id="role">
-                            <option value="Saler">Saler</option>
-                            <option value="Buyer">Buyer</option>
+                            <option value="saler">saler</option>
+                            <option value="buyer">buyer</option>
                         </select>
                     </div>
                     <p>{error}</p>
