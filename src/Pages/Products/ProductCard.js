@@ -1,7 +1,8 @@
 import React from "react";
 
 const ProductCard = ({ product, setProductDetails }) => {
-  const { name, image } = product;
+  const { name, image, condition, description, location, number, orginalPrice, resalePrice, sellerName, time, yearOfPurchase, yearOfUse} = product;
+  console.log(product);
   return (
     <div className="card bg-base-100 shadow-2xl">
       <figure>
@@ -9,10 +10,7 @@ const ProductCard = ({ product, setProductDetails }) => {
       </figure>
       <div className="card-body">
         <h2 className="card-title">{name}</h2>
-        <p>
-          You can see all the product of this category by clicking All Products
-          button
-        </p>
+        <p>{description}</p>
         <div className="card-actions w-full">
           <label
             htmlFor="booking-modal"

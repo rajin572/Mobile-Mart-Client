@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const categoriesCard = ({category}) => {
-    const {category_id, name, image} = category
+    const {category_id,name, image} = category
   return (
     <div className="card bg-base-100 shadow-2xl">
       <figure>

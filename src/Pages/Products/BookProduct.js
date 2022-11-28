@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import toast from 'react-hot-toast';
 import { AuthContext } from '../../context/AuthProvider';
 
 const BookProduct = ({productDetails, setProductDetails}) => {
@@ -35,9 +36,10 @@ const BookProduct = ({productDetails, setProductDetails}) => {
         .then(data =>{ 
             if(data.acknowledged){
                 setProductDetails(null);
+                toast.success('Booking Product Successfully!')
             }
             else{
-                alert('Already Booked')
+                toast.error("You Have Already Booked This Product")
             }
         })
         

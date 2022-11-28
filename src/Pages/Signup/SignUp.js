@@ -1,5 +1,6 @@
 import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
+import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider';
 
@@ -19,15 +20,15 @@ const SignUp = () => {
     console.log(name, email, password, role);
     createUser(email, password)
         .then(result => {
-            const user = result.user
-            console.log(user);
             form.reset()
             setError('')
             const profile = {
                 displayName:name,
             }
             updateProfileUser(profile)
-            .then(()=>{})
+            .then(()=>{
+                toast.success('Account Created Successfully!')
+            })
             .catch(error =>{
                 console.error(error);
             })
@@ -44,9 +45,8 @@ const SignUp = () => {
   const handleGoogleLogin = () =>{
       googleLogin(googleProvider)
       .then(result =>{
-        const user = result.user
-        console.log(user);
         setError('')
+        toast.success('Account Created Successfully!')
         navigate('/')
       })
       .catch(error => {
