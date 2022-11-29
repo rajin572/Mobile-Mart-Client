@@ -25,6 +25,7 @@ const MyProductsRow = ({products}) => {
         })
         console.log(value);
     }
+
     return (
         <tr>
         <td>
