@@ -40,7 +40,7 @@ const router = createBrowserRouter([
             {
                 path:'/categories/:id',
                 element:<PrivateRoute><Products></Products></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/categories/${params.id}`)
+                loader: ({params}) => fetch(`https://mobile-mart-server-iota.vercel.app/categories/${params.id}`)
             },
         ]
     },

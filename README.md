@@ -11,7 +11,9 @@ Tecnology I have Used:
 =>React.js
 =>Tailwind Css
 =>Firebase
-=>React-to-pdf package
+=>Node js
+=>Express js
+=>Mongo DB
 =>CSS
 =>HTML5
 =>JS

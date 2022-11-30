@@ -25,7 +25,7 @@ const BookProduct = ({productDetails, setProductDetails}) => {
 
 
 
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://mobile-mart-server-iota.vercel.app/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

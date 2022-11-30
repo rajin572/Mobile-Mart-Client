@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import React from "react";
 
 const AllBuyers = () => {
-  const url = "http://localhost:5000/users?role=buyer";
+  const url = "https://mobile-mart-server-iota.vercel.app/users?role=buyer";
 
   const { data: users = [] } = useQuery({
     queryKey: ["users"],

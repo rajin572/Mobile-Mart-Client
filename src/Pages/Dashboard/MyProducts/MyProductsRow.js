@@ -5,7 +5,7 @@ const MyProductsRow = ({products}) => {
     const {image, name, resalePrice, time} = products
     const [disable, setDisable] = useState(false)
     const handleupload = (value) =>{
-        fetch('http://localhost:5000/advertise', {
+        fetch('https://mobile-mart-server-iota.vercel.app/advertise', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

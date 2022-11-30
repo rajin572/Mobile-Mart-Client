@@ -63,7 +63,7 @@ const SignUp = () => {
 
     const saveUserToDatabase = (name, email, role) => {
         const user = { name, email, role };
-        fetch("http://localhost:5000/users", {
+        fetch("https://mobile-mart-server-iota.vercel.app/users", {
           method: "PUT",
           headers: {
             "content-type": "application/json",
