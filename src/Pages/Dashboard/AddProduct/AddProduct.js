@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../context/AuthProvider';
 
 const AddProduct = () => {
     const {user} = useContext(AuthContext)
+    const navigate = useNavigate()
 
     const handleAddProduct = (event) =>{
         event.preventDefault();
@@ -34,7 +36,6 @@ const AddProduct = () => {
             yearOfPurchase,
             category_id,
         }
-        console.log(addProduct);
         fetch('http://localhost:5000/products', {
             method: 'POST',
             headers: {
@@ -45,6 +46,7 @@ const AddProduct = () => {
         .then(res => res.json())
         .then(data =>{ 
             if(data.acknowledged){
+                navigate('/dashboard/myproducts')
                 form.reset()
                 toast.success('Booking Product Successfully!')
             }

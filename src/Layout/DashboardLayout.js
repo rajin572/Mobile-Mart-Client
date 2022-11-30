@@ -13,10 +13,10 @@ const DashboardLayout = () => {
             <Navbar></Navbar>
             <div className="drawer drawer-mobile">
                 <input id="dashboard-drawer" type="checkbox" className="drawer-toggle" />
-                <div className="drawer-content">
+                <div className="drawer-content px-5">
                     <Outlet></Outlet>
                 </div>
-                <div className="drawer-side">
+                <div className="drawer-side border-r-2 border-slate-900">
                     <label htmlFor="dashboard-drawer" className="drawer-overlay"></label>
                     <ul className="menu p-4 w-80 bg-base-100 text-base-content">
                         {
@@ -44,11 +44,6 @@ const DashboardLayout = () => {
                                 <li><Link to="/dashboard/allbuyers">All Buyers</Link></li>
                             )
                         }
-                        {/* {
-                            isAdmin && <>
-                                <li><Link to="/dashboard/allusers">All users</Link></li>
-                            </>
-                        } */}
                     </ul>
                 </div>
             </div>
