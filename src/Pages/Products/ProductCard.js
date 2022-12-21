@@ -5,8 +5,8 @@ const ProductCard = ({ product, setProductDetails }) => {
   console.log(product);
   return (
     <div className="card bg-base-100 shadow-2xl">
-      <figure>
-        <img className="rounded-lg" src={image} alt="Shoes" />
+      <figure className="phone-image">
+        <img className="rounded-lg" src={image} alt="phone" />
       </figure>
       <div className="card-body">
         <h2 className="card-title text-3xl text-slate-800">{name}</h2>
