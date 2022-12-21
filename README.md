@@ -19,5 +19,5 @@ Tecnology I have Used:
 =>JS
 <br/>
 Admin:
-=>Admin Email: admin@gmail.com
-=>Admin Password: 25802580
+=>Admin Email: <admin@gmail.com>
+=>Admin Password: <25802580>
