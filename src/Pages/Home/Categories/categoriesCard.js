@@ -7,7 +7,7 @@ const categoriesCard = ({category}) => {
     <div className="card bg-base-100 shadow-2xl">
       <figure>
         <img
-          className="rounded-lg"
+          className="rounded-lg w-full h-[200px]"
           src={image}
           alt="Shoes"
         />

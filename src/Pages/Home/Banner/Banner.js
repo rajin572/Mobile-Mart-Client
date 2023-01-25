@@ -6,7 +6,7 @@ const Banner = () => {
         <div>
         <div className="hero mt-6">
             <div className="hero-content flex-col justify-between lg:flex-row-reverse">
-                <img src={bannerImg} className="rounded-lg lg:w-1/2 shadow-2xl" alt='' />
+                <img src={bannerImg} className="rounded-lg lg:w-1/2" alt='' />
                 <div>
                     <h1 className="text-5xl font-bold">Mobile Mart</h1>
                     <p className="py-6">Sell your mobile phone for cash! Get the most cash for your phone or tablet. And buy the excellent condition mobiles in cheap price </p>
