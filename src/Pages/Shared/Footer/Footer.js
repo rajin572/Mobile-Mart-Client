@@ -26,7 +26,7 @@ const Footer = () => {
         <Link className="link link-hover">Privacy policy</Link>
         <Link className="link link-hover">Cookie policy</Link>
       </div>
-      <div>
+      <div className="hidden sm:block">
         <span className="footer-title">Newsletter</span>
         <div className="form-control w-80">
           <label className="label">

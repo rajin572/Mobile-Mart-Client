@@ -6,7 +6,7 @@ const ProductCard = ({ product, setProductDetails }) => {
   return (
     <div className="card bg-base-100 shadow-2xl mb-20">
       <figure className="phone-image">
-        <img className="rounded-lg sm:h-[220px] md:h-[200px] lg:h-[180px]" src={image} alt="phone" />
+        <img className="rounded-lg h-[200px] sm:h-[220px] md:h-[200px] lg:h-[180px]" src={image} alt="phone" />
       </figure>
       <div className="card-body">
         <h2 className="card-title text-3xl text-slate-900">{name}</h2>

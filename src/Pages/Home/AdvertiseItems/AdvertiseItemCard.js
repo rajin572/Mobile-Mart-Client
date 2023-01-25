@@ -11,7 +11,7 @@ const AdvertiseItemCard = ({ add, setAddDetails }) => {
     <div className="card bg-base-100 shadow-xl">
       <figure>
         <img
-          className="rounded-lg sm:h-[220px] md:h-[200px] lg:h-[180px]"
+          className="rounded-lg h-[200px] sm:h-[220px] md:h-[200px] lg:h-[180px]"
           src={image}
           alt="Shoes"
         />
