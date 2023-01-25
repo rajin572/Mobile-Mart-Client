@@ -4,6 +4,7 @@ import About from '../About/About';
 import AdvertiseItems from '../AdvertiseItems/AdvertiseItems';
 import Banner from '../Banner/Banner';
 import Categories from '../Categories/Categories';
+import ShippingDetails from '../shippingDetails/ShippingDetails';
 
 const Home = () => {
     const [loading, isLoading] = useState(true)
@@ -19,6 +20,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
+            <ShippingDetails/>
             {
                 loading ? <div class="flex items-center justify-center mt-10">
                 <div class="spinner-border animate-spin inline-block w-12 h-12 border-4 border-black rounded-full" role="status">
