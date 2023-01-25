@@ -1,7 +1,7 @@
 import React from "react";
 
 const ProductCard = ({ product, setProductDetails }) => {
-  const { name, image, condition, description, location, number, orginalPrice, resalePrice, sellerName, time, yearOfPurchase, yearOfUse} = product;
+  const { name, image, condition, description, resalePrice} = product;
   console.log(product);
   return (
     <div className="card bg-base-100 shadow-2xl mb-20">
