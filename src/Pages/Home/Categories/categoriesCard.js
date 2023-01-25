@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 const categoriesCard = ({category}) => {
     const {category_id,name, image} = category
   return (
-    <div className="card bg-base-100 shadow-2xl">
+    <div className="card bg-base-100 shadow-xl">
       <figure>
         <img
-          className="rounded-lg w-full h-[200px]"
+          className="rounded-lg w-full sm:h-[200px] md:h-[180px] lg:h-[150px]"
           src={image}
           alt="Shoes"
         />
