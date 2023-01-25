@@ -5,7 +5,7 @@ import { AiOutlineCodeSandbox } from "react-icons/ai";
 
 const ShippingDetails = () => {
   return (
-    <div className="py-5 bg-gray-900 text-white">
+    <div className="py-5 bg-zinc-700 text-white">
       <div className="lg:w-4/5 mx-auto gap-5 grid grid-cols-2 md:grid-cols-4">
         <div className="flex justify-center gap-2 items-center">
           <div className="p-2 rounded-full border-2 border-[#234D97]">
@@ -22,14 +22,14 @@ const ShippingDetails = () => {
         </div>
         <div className="flex justify-center gap-2 items-center">
           <div className="p-2 rounded-full border-2 border-[#234D97]">
-            <AiOutlineCodeSandbox className=" text-[#E96631] text-4xl" />
+            <MdOutlineLocalPolice className=" text-[#E96631] text-4xl" />
           </div>
 
           <p>Secure Shopping <p className=" text-slate-400">Best security features </p></p>
         </div>
         <div className="flex justify-center gap-2 items-center">
           <div className="p-2 rounded-full border-2 border-[#234D97]">
-            <MdOutlineLocalPolice className=" text-[#E96631] text-4xl" />
+            <AiOutlineCodeSandbox className=" text-[#E96631] text-4xl" />
           </div>
 
           <p>Unlimited Blocks <p className=" text-slate-400">Any content, any page</p> </p>
