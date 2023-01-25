@@ -10,7 +10,7 @@ const Banner = () => {
                 <div>
                     <h1 className="text-5xl font-bold">Mobile Mart</h1>
                     <p className="py-6">Sell your mobile phone for cash! Get the most cash for your phone or tablet. And buy the excellent condition mobiles in cheap price </p>
-                    <button className='btn btn-outline border-zinc-900'>Getting Started</button>
+                    <button className='btn btn-outline'>Getting Started</button>
                 </div>
             </div>
         </div>

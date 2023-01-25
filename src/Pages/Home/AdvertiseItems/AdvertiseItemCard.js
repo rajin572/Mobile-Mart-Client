@@ -23,7 +23,7 @@ const AdvertiseItemCard = ({ add, setAddDetails }) => {
         <div className="card-actions w-full">
           <label
             htmlFor="booking-modal"
-            className="btn btn-outline w-full text-black"
+            className="btn btn-outline w-full"
             onClick={() => setAddDetails(add)}
           >
             Book Product
