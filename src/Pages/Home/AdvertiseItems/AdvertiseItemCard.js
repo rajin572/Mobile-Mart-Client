@@ -1,12 +1,7 @@
 import React from "react";
 
 const AdvertiseItemCard = ({ add, setAddDetails }) => {
-  const {
-    name,
-    image,
-    condition,
-    resalePrice,
-  } = add;
+  const { name, image, condition, resalePrice } = add;
   return (
     <div className="card bg-base-100 shadow-xl">
       <figure>
@@ -19,7 +14,9 @@ const AdvertiseItemCard = ({ add, setAddDetails }) => {
       <div className="card-body">
         <h2 className="card-title text-2xl text-slate-800">{name}</h2>
         <p>Condition : {condition}</p>
-        <p className=" text-xl">Price: <span className="font-bold">{resalePrice}$</span></p>
+        <p className=" text-xl">
+          Price: <span className="font-bold">{resalePrice}$</span>
+        </p>
         <div className="card-actions w-full">
           <label
             htmlFor="booking-modal"
