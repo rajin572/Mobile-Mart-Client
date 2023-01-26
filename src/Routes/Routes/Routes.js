@@ -17,62 +17,81 @@ const { createBrowserRouter } = require("react-router-dom");
 const { default: Main } = require("../../Layout/Main");
 
 const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <Main></Main>,
-        children: [
-            {
-                path: '/',
-                element:<Home></Home>
-            },
-            {
-                path: '/blog',
-                element:<Blog></Blog>
-            },
-            {
-                path:'/login',
-                element:<Login></Login>
-            },
-            {
-                path:'/signup',
-                element:<SignUp></SignUp>
-            },
-            {
-                path:'/categories/:id',
-                element:<PrivateRoute><Products></Products></PrivateRoute>,
-                loader: ({params}) => fetch(`https://mobile-mart-server-iota.vercel.app/categories/${params.id}`)
-            },
-        ]
-    },
-    {
-        path: '/dashboard',
-        element:<PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
-        children:[
-            {
-                path: '/dashboard/myorders',
-                element: <MyOrders></MyOrders>
-            },
-            {
-                path: '/dashboard/addproduct',
-                element:<AddProduct></AddProduct>
-            },
-            {
-                path: '/dashboard/myproducts',
-                element:<MyProducts></MyProducts>
-            },
-            {
-                path:'/dashboard/allsellers',
-                element:<AdminRoute><AllSellers></AllSellers></AdminRoute>
-            },
-            {
-                path:'/dashboard/allbuyers',
-                element:<AdminRoute><AllBuyers></AllBuyers></AdminRoute>
-            }
-        ]
-    },
-    {
-        path: '*',
-        element:<ErrorPage></ErrorPage>
-    }
-])
+  {
+    path: "/",
+    element: <Main></Main>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "/blog",
+        element: <Blog></Blog>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/signup",
+        element: <SignUp></SignUp>,
+      },
+      {
+        path: "/categories/:id",
+        element: (
+          <PrivateRoute>
+            <Products></Products>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(
+            `https://mobile-mart-server-iota.vercel.app/categories/${params.id}`
+          ),
+      },
+    ],
+  },
+  {
+    path: "/dashboard",
+    element: (
+      <PrivateRoute>
+        <DashboardLayout></DashboardLayout>
+      </PrivateRoute>
+    ),
+    children: [
+      {
+        path: "/dashboard/myorders",
+        element: <MyOrders></MyOrders>,
+      },
+      {
+        path: "/dashboard/addproduct",
+        element: <AddProduct></AddProduct>,
+      },
+      {
+        path: "/dashboard/myproducts",
+        element: <MyProducts></MyProducts>,
+      },
+      {
+        path: "/dashboard/allsellers",
+        element: (
+          <AdminRoute>
+            <AllSellers></AllSellers>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "/dashboard/allbuyers",
+        element: (
+          <AdminRoute>
+            <AllBuyers></AllBuyers>
+          </AdminRoute>
+        ),
+      },
+    ],
+  },
+  {
+    path: "*",
+    element: <ErrorPage></ErrorPage>,
+  },
+]);
 export default router;
